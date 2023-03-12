@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script id="app-template" type="text/x-template">
+      <div>
+        <h1  tabindex="1">{{state}}</h1>
+        <div>
+          <button @click="toggle()">{{toggleText}}</button>
+          <div v-if="showCounter" >
+            <button type="button" @click="handleIncreaseCountClick">{{countText}}</button>
+            <div tabindex="2">{{doubleCountText}}</div>
+          </div>
+          <div tabindex="3">{{activeElementText}}</div>
+        </div>
+      </div>
+    </script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
